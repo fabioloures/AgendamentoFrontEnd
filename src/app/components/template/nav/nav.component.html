@@ -1,0 +1,36 @@
+<mat-sidenav-container class="container">
+
+    <mat-sidenav class="sidenav" mode="side" opened
+    fixedInViewport="true"  fixedTopGap='66' >
+
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink='/'>
+                <i class="material-icons">
+                   launch
+                </i>
+                Sala
+            </a>
+
+            <a mat-list-item routerLink='/eventos'>
+                <i class="material-icons">
+                   event
+                </i>
+                Eventos
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="content">
+ 
+       <!-- <app-evento-crud></app-evento-crud>-->
+       <router-outlet>
+
+
+       </router-outlet>
+
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

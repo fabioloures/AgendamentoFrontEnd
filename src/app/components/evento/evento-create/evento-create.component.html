@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-title> Novo Evento</mat-card-title>
+    <form>
+      
+        <mat-form-field>
+            <input matInput placeholder="Nome Responsavel" 
+               [(ngModel)]="evento.nome_resp" name="nome_responsavel">
+        </mat-form-field>
+        
+            <select  matInput placeholder="Sala"
+            [(ngModel)]="evento.salaNome" name="sala"> 
+            <option *ngFor="let dl of listitens" [value]="dl"> 
+             {{dl}}
+            </option>
+            </select>
+    
+        <mat-form-field>
+             <input type="date"  matInput placeholder="Data Inicial"
+            [(ngModel)]="evento.data_inicial" name="datainicial" class="datepicker"> 
+           
+
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date"   matInput placeholder="Data Final"
+            [(ngModel)]="evento.data_final" name="datafinal">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button  (click)="creatEvento()" color="primary">
+        Salvar  
+    </button>    
+    <button mat-raised-button  (click)="cancel()">
+        Cancelar  
+    </button>
+
+</mat-card>
+
+

@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title> Exclusão do Evento</mat-card-title>
+    <form>
+      
+        <mat-form-field>
+            <input matInput placeholder="Nome Responsavel" 
+               [value]="evento.nome_resp" name="nome_responsavel" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sala"
+            [value]="evento.salaNome" name="sala" disabled>  
+        </mat-form-field>
+        <mat-form-field>
+            <input type="datetime-local"  matInput placeholder="Data Inicial"
+            [value]="evento.data_inicial" name="datainicial" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="datetime-local"   matInput placeholder="Data Final"
+            [value]="evento.data_final" name="datafinal" disabled>
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button  (click)="deleteEvento()" color="warn">
+        Excluir  
+    </button>    
+    <button mat-raised-button  (click)="cancel()">
+        Cancelar  
+    </button>
+
+</mat-card>
